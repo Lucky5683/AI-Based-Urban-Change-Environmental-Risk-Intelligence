@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Executive Summary
+##  Executive Summary
 
 This project delivers an end-to-end, scientifically grounded **Applied Data Science & Geospatial Intelligence System** for **Chittoor District, Andhra Pradesh, India**. 
 
@@ -23,7 +23,7 @@ The system synthesizes multi-decadal satellite Earth observation imagery (**Cope
 
 ---
 
-## 🔄 End-to-End Data Science Lifecycle
+##  End-to-End Data Science Lifecycle
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
@@ -83,7 +83,7 @@ The system synthesizes multi-decadal satellite Earth observation imagery (**Cope
 
 ---
 
-## 🔬 Scientific Methodology & Governance
+##  Scientific Methodology & Governance
 
 ### 1. The Role of Artificial Intelligence & Machine Learning
 This project maintains strict scientific honesty regarding the scope and limits of AI/ML:
@@ -107,7 +107,7 @@ Per `outputs/tables/dashboard_data_contract.csv`, all findings are governed by s
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 AI-Based-Urban-Change-Environmental-Risk-Intelligence/
@@ -165,7 +165,7 @@ AI-Based-Urban-Change-Environmental-Risk-Intelligence/
 
 ---
 
-## 🚀 Installation & Reproduction Guide
+##  Installation & Reproduction Guide
 
 ### 1. Prerequisites
 * Python 3.10, 3.11, 3.12, or 3.14
@@ -194,7 +194,7 @@ Open your web browser at `http://localhost:8501`.
 
 ---
 
-## 📊 Dashboard Modules Overview
+##  Dashboard Modules Overview
 
 The redesigned dashboard provides 8 analytical modules:
 1. **Executive Overview:** High-level executive synthesis of headline KPIs, decadal expansion rates, multi-indicator trajectory selectors, and bivariate relationship scatter plots.
@@ -208,5 +208,5 @@ The redesigned dashboard provides 8 analytical modules:
 
 ---
 
-## ⚖️ Scientific Disclaimer & Governance
+##  Scientific Disclaimer & Governance
 This project produces **research-oriented environmental screening indicators and statistical projections**. Relative environmental stress scores represent screening prioritizations to direct field inspection and monitoring; they do **NOT** represent structural building collapse forecasts, definitive regulatory hazard ratings, or legally binding determinations.
