@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "title": "Integrated Spatial Change Interpretation & Cross-Dataset Validation Manifest",
+    "region": "Chittoor District, Andhra Pradesh, India",
+    "execution_date_utc": "2026-09-06T07:37:34.877899+00:00",
+    "script_version": "integrated_spatial_change_analysis.py v1.0",
+    "crs": "EPSG:4326 (WGS84)",
+    "spatial_resolution_native_m": 10.0,
+    "analysis_scale_rationale": "Native 10 m pixel streaming for S2 and Dynamic World; district-level longitudinal integration for MODIS and CHIRPS to avoid false precision.",
+    "comparability_rule": "Intersections evaluated strictly within common-valid mask (69,256,014 pixels, 6,702.05 km2 geodesic).",
+    "raw_and_processed_files_modified": 0,
+    "immutability_passed": true
+  },
+  "source_datasets": {
+    "sentinel2_ndvi_change": "data/processed/change_detection/sentinel2_{tile}_ndvi_change_2016_2025.tif",
+    "sentinel2_ndwi_change": "data/processed/change_detection/sentinel2_{tile}_ndwi_change_2016_2025.tif",
+    "sentinel2_ndbi_change": "data/processed/change_detection/sentinel2_{tile}_ndbi_change_2016_2025.tif",
+    "dynamic_world_builtup": "data/raw/satellite/Chittoor_New_BuiltUp_2016_2025.tif",
+    "modis_daytime_lst": "GEE MODIS Terra daytime LST in data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv",
+    "chirps_rainfall": "CHIRPS precipitation in data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv"
+  },
+  "district_metrics": {
+    "total_pixels": 229018359,
+    "valid_pixels": {
+      "count": 69256014,
+      "area_km2_geodesic": 6702.08,
+      "area_km2_nominal": 6925.6
+    },
+    "nan_pixels": {
+      "count": 159762345,
+      "area_km2_geodesic": 15460.6,
+      "area_km2_nominal": 15976.23
+    },
+    "ndvi_decrease": {
+      "count": 9832911,
+      "area_km2_geodesic": 951.56,
+      "area_km2_nominal": 983.29,
+      "pct_of_valid": 14.198
+    },
+    "ndvi_increase": {
+      "count": 12284854,
+      "area_km2_geodesic": 1188.84,
+      "area_km2_nominal": 1228.49
+    },
+    "ndwi_decrease": {
+      "count": 3896157,
+      "area_km2_geodesic": 377.04,
+      "area_km2_nominal": 389.62,
+      "pct_of_valid": 5.626
+    },
+    "ndwi_increase": {
+      "count": 6008088,
+      "area_km2_geodesic": 581.42,
+      "area_km2_nominal": 600.81
+    },
+    "ndbi_increase": {
+      "count": 8774633,
+      "area_km2_geodesic": 849.14,
+      "area_km2_nominal": 877.46,
+      "pct_of_valid": 12.67
+    },
+    "ndbi_decrease": {
+      "count": 8570908,
+      "area_km2_geodesic": 829.43,
+      "area_km2_nominal": 857.09
+    },
+    "dw_new_builtup": {
+      "count": 1505079,
+      "area_km2_geodesic": 145.65,
+      "area_km2_nominal": 150.51,
+      "pct_of_valid": 2.173
+    },
+    "ndvi_dec_AND_ndbi_inc": {
+      "count": 5337209,
+      "area_km2_geodesic": 516.5,
+      "area_km2_nominal": 533.72,
+      "pct_of_valid": 7.706,
+      "pct_of_ndvi_dec": 54.279,
+      "pct_of_ndbi_inc": 60.825
+    },
+    "ndvi_dec_AND_dw_builtup": {
+      "count": 452318,
+      "area_km2_geodesic": 43.77,
+      "area_km2_nominal": 45.23,
+      "pct_of_valid": 0.653,
+      "pct_of_ndvi_dec": 4.6,
+      "pct_of_dw_builtup": 30.053
+    },
+    "ndbi_inc_AND_dw_builtup": {
+      "count": 216402,
+      "area_km2_geodesic": 20.94,
+      "area_km2_nominal": 21.64,
+      "pct_of_valid": 0.312,
+      "pct_of_ndbi_inc": 2.466,
+      "pct_of_dw_builtup": 14.378
+    },
+    "triple_urban_veg": {
+      "count": 169891,
+      "area_km2_geodesic": 16.44,
+      "area_km2_nominal": 16.99,
+      "pct_of_valid": 0.245,
+      "pct_of_dw_builtup": 11.288,
+      "pct_of_ndbi_inc": 1.936,
+      "pct_of_ndvi_dec": 1.728
+    },
+    "ndbi_dw_no_vegdrop": {
+      "count": 46511,
+      "area_km2_geodesic": 4.5,
+      "area_km2_nominal": 4.65
+    },
+    "s2_spectral_only": {
+      "count": 5167318,
+      "area_km2_geodesic": 500.05,
+      "area_km2_nominal": 516.73
+    },
+    "ndvi_dec_alone": {
+      "count": 4213275,
+      "area_km2_geodesic": 407.73,
+      "area_km2_nominal": 421.33
+    },
+    "ndbi_inc_alone": {
+      "count": 3390913,
+      "area_km2_geodesic": 328.15,
+      "area_km2_nominal": 339.09
+    },
+    "dw_builtup_alone": {
+      "count": 1006250,
+      "area_km2_geodesic": 97.38,
+      "area_km2_nominal": 100.62
+    },
+    "ndwi_dec_alone": {
+      "count": 3817281,
+      "area_km2_geodesic": 369.41,
+      "area_km2_nominal": 381.73
+    },
+    "conflicted_dw_veginc": {
+      "count": 220456,
+      "area_km2_geodesic": 21.33,
+      "area_km2_nominal": 22.05
+    },
+    "ndwi_dec_AND_rainfall_deficit": {
+      "count": 3896157,
+      "area_km2_geodesic": 377.04,
+      "area_km2_nominal": 389.62,
+      "pct_of_valid": 5.626,
+      "pct_of_ndwi_dec": 100.0,
+      "spatial_context": "District-wide 2016 drought baseline (-402.1 mm anomaly, -34.8%)"
+    },
+    "ndvi_dec_AND_rainfall_deficit": {
+      "count": 9832911,
+      "area_km2_geodesic": 951.56,
+      "area_km2_nominal": 983.29,
+      "pct_of_valid": 14.198,
+      "pct_of_ndvi_dec": 100.0,
+      "spatial_context": "District-wide 2016 drought baseline (-402.1 mm anomaly, -34.8%)"
+    }
+  },
+  "outputs": {
+    "evidence_table_csv": "outputs\\tables\\integrated_spatial_change_evidence.csv",
+    "evidence_overview_map_png": "outputs\\figures\\integrated_change\\integrated_spatial_evidence_overview.png",
+    "manifest_json": "data\\metadata\\integrated_spatial_change_manifest.json"
+  }
+}

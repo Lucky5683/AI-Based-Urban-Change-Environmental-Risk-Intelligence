@@ -1,0 +1,4 @@
+file,phrase,risk,recommended_language
+docs/research_log/04_preprocessing.md:157,3. **Window/Block-Based Streaming**: Processed rasters in vertical chunks of 1024 rows to guarantee ,False Certainty Risk,Use 'projected indicator under historical trend continuation'.
+docs/research_log/04_preprocessing.md:204,"- Cause: Solar specular glint or bright artificial surfaces (e.g., metal roofs/quarries).",Causal Assertion Risk,"Use 'associated with', 'correlated with', or 'observed alongside'."
+docs/research_log/12_prediction_feasibility.md:99,To guarantee zero data leakage:,False Certainty Risk,Use 'projected indicator under historical trend continuation'.

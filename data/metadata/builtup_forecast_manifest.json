@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "title": "1-Year-Ahead Built-Up Forecasting Manifest",
+    "region": "Chittoor District, Andhra Pradesh, India",
+    "execution_date_utc": "2026-09-06T08:16:22.806552+00:00",
+    "script_name": "forecast_builtup_2026.py",
+    "version": "1.0",
+    "governing_principle": "DO NOT TRAIN A MODEL JUST TO CLAIM 'AI'. Prediction allowed only when scientifically defensible."
+  },
+  "source_data": {
+    "dataset": "Chittoor_Master_Research_Dataset_2016_2025.csv",
+    "path": "data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv",
+    "columns": [
+      "year",
+      "built_up_km2",
+      "strong_built_up_km2"
+    ],
+    "temporal_range": [
+      2016,
+      2025
+    ],
+    "n_observations": 10,
+    "missing_values": 0,
+    "primary_sensor": "Copernicus Sentinel-2 via Google Dynamic World"
+  },
+  "validation_protocol": {
+    "methodology": "Chronological Walk-Forward Rolling Origin",
+    "validation_period": [
+      2022,
+      2025
+    ],
+    "n_validation_points": 4,
+    "data_leakage_safeguards": "Strict temporal lag; zero future data leakage; zero concurrent endogenous predictors."
+  },
+  "models_evaluated": {
+    "selected_model": "OLS Linear Trend Extrapolation with 95% Prediction Intervals",
+    "baseline_model": "Naive Last-Value Persistence (y_{t-1})"
+  },
+  "performance_metrics": {
+    "built_up_km2": {
+      "validation_mae_km2": 8.07,
+      "validation_rmse_km2": 10.24,
+      "validation_mape_pct": 3.3,
+      "baseline_mae_km2": 14.44,
+      "improvement_over_baseline_pct": 44.1
+    },
+    "strong_built_up_km2": {
+      "validation_mae_km2": 3.1,
+      "validation_rmse_km2": 3.26,
+      "validation_mape_pct": 5.04,
+      "baseline_mae_km2": 4.97,
+      "improvement_over_baseline_pct": 37.6
+    }
+  },
+  "forecast_results_2026": {
+    "built_up_km2": {
+      "forecast_year": 2026,
+      "point_forecast_km2": 270.32,
+      "pi_95_lower_km2": 250.02,
+      "pi_95_upper_km2": 290.62,
+      "margin_of_error_95_km2": 20.3,
+      "historical_2025_km2": 259.21,
+      "expected_increase_km2": 11.11,
+      "expected_increase_pct": 4.29,
+      "trend_slope_km2_per_year": 11.0931,
+      "trend_r2": 0.96,
+      "trend_p_value": 7.09e-07
+    },
+    "strong_built_up_km2": {
+      "forecast_year": 2026,
+      "point_forecast_km2": 70.31,
+      "pi_95_lower_km2": 64.75,
+      "pi_95_upper_km2": 75.87,
+      "margin_of_error_95_km2": 5.56,
+      "historical_2025_km2": 69.01,
+      "expected_increase_km2": 1.3,
+      "expected_increase_pct": 1.88,
+      "trend_slope_km2_per_year": 3.5138,
+      "trend_r2": 0.9698,
+      "trend_p_value": 2.3e-07
+    }
+  },
+  "sanity_checks": {
+    "all_forecasts_positive": true,
+    "prediction_intervals_valid": true,
+    "plausible_district_range": true,
+    "temporal_leakage_prevented": true,
+    "zero_spatial_hallucination": true,
+    "immutability_passed": true
+  }
+}

@@ -1,0 +1,14 @@
+category,status,severity,evidence,action_required
+Data correctness,PASS,None,"All tabular assets (Master CSV, Stress Grid, Forecast, Decision Support) match authoritative source files with 0 discrepancy.",None. Data contract strictly adhered to.
+Numerical correctness,PASS,None,"36 audited headline numbers match ground truth exactly; forecast bounds [250.02, 290.62] and stress stats (mean 0.2213, max 0.6771) verified.",None. Number traceability table verified.
+Scientific correctness,PASS,None,Built-Up vs LST (r=-0.827) correctly labeled non-causal association; stress labeled relative screening; sensor non-independence documented.,None. Prohibited interpretations eliminated.
+Image rendering,PASS,None,"True Color (B4/B3/B2), False Color (B8/B4/B3), NDVI, NDWI, NDBI render via windowed reads across 4 ROIs without memory spikes.",None. Sub-second windowed loading functional.
+Spatial rendering,PASS,None,"1 km grid with 6,902 cells correctly plots with OpenStreetMap tiles; quartile coloring (Q1-Q4) distinct; Cell Inspector deconstructs components.",None. Spatial integrity preserved.
+Forecast rendering,PASS,None,1-year-ahead linear trend extrapolation (270.32 km²) with 95% PI shaded band rendered; NO spatial construction map displayed.,None. Macro-level policy disclaimer enforced.
+Decision support,PASS,None,Executive decision summary and decision matrix present 4 priorities and 5 issue cards framed strictly as monitoring and field inspection.,None. Unsupported alarmist commands avoided.
+Provenance,PASS,None,"Every headline indicator, table, and raster references authoritative source filename, variable name, and spatial-temporal resolution.",None. Provenance table available in Methodology page.
+Performance,PASS,None,Windowed rasterio reading (~0.05s) prevents loading 4.2 GB GeoTIFFs into RAM; all CSVs and overview figures cached with @st.cache_data.,None. Performance safeguards active.
+UI/UX,PASS,None,"Professional layout, dark header banner, high-contrast KPI cards, responsive Plotly charts, intuitive 7-page sidebar radio navigation.",None. Clean scientific styling.
+Accessibility,PASS,None,"Readable font contrast, explicit chart axis labels with units, tooltips, textual metric cards accompanying color visualizations.",None. Textual fallbacks available.
+Language,PASS,None,Codebase scan confirmed zero unsafe assertions; all 4 keyword matches are defensive negation disclaimers.,None. Non-prescriptive wording verified.
+User journey,PASS,None,End-to-end workflow (Overview -> History -> Images -> Stress Map -> Hotspots -> Forecast -> Decision Support -> Methodology) seamless.,None. Self-contained intelligence layer.

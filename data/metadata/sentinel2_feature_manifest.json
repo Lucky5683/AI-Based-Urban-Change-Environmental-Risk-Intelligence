@@ -1,0 +1,553 @@
+{
+  "project": "AI-Based Urban Change & Environmental Risk Intelligence",
+  "study_region": "Chittoor District, Andhra Pradesh, India",
+  "stage": "Sentinel-2 Feature Engineering",
+  "generated_at": "2026-09-06T06:46:22.970123+00:00",
+  "script": "generate_sentinel2_features.py v1.0",
+  "input_satellite_files_count": 4,
+  "total_feature_rasters_count": 12,
+  "feature_definitions": {
+    "NDVI": {
+      "formula": "(B8 - B4) / (B8 + B4)",
+      "target": "Vegetation condition"
+    },
+    "NDWI": {
+      "formula": "(B3 - B8) / (B3 + B8)",
+      "target": "Water-related spectral indicator"
+    },
+    "NDBI": {
+      "formula": "(B11 - B8) / (B11 + B8)",
+      "target": "Built-up/urban spectral indicator"
+    }
+  },
+  "features": [
+    {
+      "feature_name": "NDVI",
+      "year": "2016",
+      "tile": "tile1",
+      "tile_identifier": "0000000000-0000000000",
+      "source_filename": "Chittoor_Sentinel2_2016_Multispectral-0000000000-0000000000.tif",
+      "formula": "(B8 - B4) / (B8 + B4)",
+      "source_bands": [
+        "B8",
+        "B4"
+      ],
+      "output_filename": "sentinel2_2016_tile1_ndvi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 13568,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 78.19924379788847,
+        "top": 13.782132752018523,
+        "right": 79.41807797538183,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 174932224,
+      "valid_pixel_count": 64152494,
+      "invalid_pixel_count": 110779730,
+      "pct_finite": 36.6728,
+      "pct_gt_zero": 99.7455,
+      "out_of_range_count": 0,
+      "min": -0.728485,
+      "max": 0.903139,
+      "mean": 0.465489,
+      "median": 0.457143,
+      "std": 0.155912,
+      "p1": 0.134761,
+      "p99": 0.788638,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:43:44.748856+00:00"
+    },
+    {
+      "feature_name": "NDWI",
+      "year": "2016",
+      "tile": "tile1",
+      "tile_identifier": "0000000000-0000000000",
+      "source_filename": "Chittoor_Sentinel2_2016_Multispectral-0000000000-0000000000.tif",
+      "formula": "(B3 - B8) / (B3 + B8)",
+      "source_bands": [
+        "B3",
+        "B8"
+      ],
+      "output_filename": "sentinel2_2016_tile1_ndwi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 13568,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 78.19924379788847,
+        "top": 13.782132752018523,
+        "right": 79.41807797538183,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 174932224,
+      "valid_pixel_count": 64152494,
+      "invalid_pixel_count": 110779730,
+      "pct_finite": 36.6728,
+      "pct_gt_zero": 0.3047,
+      "out_of_range_count": 0,
+      "min": -0.828633,
+      "max": 0.819706,
+      "mean": -0.507985,
+      "median": -0.511662,
+      "std": 0.104347,
+      "p1": -0.704978,
+      "p99": -0.223932,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:43:44.832588+00:00"
+    },
+    {
+      "feature_name": "NDBI",
+      "year": "2016",
+      "tile": "tile1",
+      "tile_identifier": "0000000000-0000000000",
+      "source_filename": "Chittoor_Sentinel2_2016_Multispectral-0000000000-0000000000.tif",
+      "formula": "(B11 - B8) / (B11 + B8)",
+      "source_bands": [
+        "B11",
+        "B8"
+      ],
+      "output_filename": "sentinel2_2016_tile1_ndbi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 13568,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 78.19924379788847,
+        "top": 13.782132752018523,
+        "right": 79.41807797538183,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 174932224,
+      "valid_pixel_count": 64152494,
+      "invalid_pixel_count": 110779730,
+      "pct_finite": 36.6728,
+      "pct_gt_zero": 60.9902,
+      "out_of_range_count": 0,
+      "min": -0.746589,
+      "max": 0.841847,
+      "mean": 0.014026,
+      "median": 0.032611,
+      "std": 0.112011,
+      "p1": -0.29658,
+      "p99": 0.204781,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:43:44.950281+00:00"
+    },
+    {
+      "feature_name": "NDVI",
+      "year": "2016",
+      "tile": "tile2",
+      "tile_identifier": "0000000000-0000013568",
+      "source_filename": "Chittoor_Sentinel2_2016_Multispectral-0000000000-0000013568.tif",
+      "formula": "(B8 - B4) / (B8 + B4)",
+      "source_bands": [
+        "B8",
+        "B4"
+      ],
+      "output_filename": "sentinel2_2016_tile2_ndvi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 4195,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 79.41807797538183,
+        "top": 13.782132752018523,
+        "right": 79.79492123706997,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 54086135,
+      "valid_pixel_count": 5103779,
+      "invalid_pixel_count": 48982356,
+      "pct_finite": 9.4364,
+      "pct_gt_zero": 98.9935,
+      "out_of_range_count": 0,
+      "min": -0.984252,
+      "max": 0.893164,
+      "mean": 0.484877,
+      "median": 0.496128,
+      "std": 0.194476,
+      "p1": 0.002832,
+      "p99": 0.816346,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:44:01.615731+00:00"
+    },
+    {
+      "feature_name": "NDWI",
+      "year": "2016",
+      "tile": "tile2",
+      "tile_identifier": "0000000000-0000013568",
+      "source_filename": "Chittoor_Sentinel2_2016_Multispectral-0000000000-0000013568.tif",
+      "formula": "(B3 - B8) / (B3 + B8)",
+      "source_bands": [
+        "B3",
+        "B8"
+      ],
+      "output_filename": "sentinel2_2016_tile2_ndwi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 4195,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 79.41807797538183,
+        "top": 13.782132752018523,
+        "right": 79.79492123706997,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 54086135,
+      "valid_pixel_count": 5103779,
+      "invalid_pixel_count": 48982356,
+      "pct_finite": 9.4364,
+      "pct_gt_zero": 1.151,
+      "out_of_range_count": 0,
+      "min": -0.80484,
+      "max": 0.990268,
+      "mean": -0.507303,
+      "median": -0.522251,
+      "std": 0.149069,
+      "p1": -0.726492,
+      "p99": 0.104155,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:44:01.625703+00:00"
+    },
+    {
+      "feature_name": "NDBI",
+      "year": "2016",
+      "tile": "tile2",
+      "tile_identifier": "0000000000-0000013568",
+      "source_filename": "Chittoor_Sentinel2_2016_Multispectral-0000000000-0000013568.tif",
+      "formula": "(B11 - B8) / (B11 + B8)",
+      "source_bands": [
+        "B11",
+        "B8"
+      ],
+      "output_filename": "sentinel2_2016_tile2_ndbi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 4195,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 79.41807797538183,
+        "top": 13.782132752018523,
+        "right": 79.79492123706997,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 54086135,
+      "valid_pixel_count": 5103779,
+      "invalid_pixel_count": 48982356,
+      "pct_finite": 9.4364,
+      "pct_gt_zero": 48.3798,
+      "out_of_range_count": 0,
+      "min": -0.805522,
+      "max": 0.956989,
+      "mean": -0.015606,
+      "median": -0.006333,
+      "std": 0.143521,
+      "p1": -0.346361,
+      "p99": 0.266569,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:44:01.640758+00:00"
+    },
+    {
+      "feature_name": "NDVI",
+      "year": "2025",
+      "tile": "tile1",
+      "tile_identifier": "0000000000-0000000000",
+      "source_filename": "Chittoor_Sentinel2_2025_Multispectral-0000000000-0000000000.tif",
+      "formula": "(B8 - B4) / (B8 + B4)",
+      "source_bands": [
+        "B8",
+        "B4"
+      ],
+      "output_filename": "sentinel2_2025_tile1_ndvi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 13568,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 78.19924379788847,
+        "top": 13.782132752018523,
+        "right": 79.41807797538183,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 174932224,
+      "valid_pixel_count": 64153381,
+      "invalid_pixel_count": 110778843,
+      "pct_finite": 36.6733,
+      "pct_gt_zero": 99.4997,
+      "out_of_range_count": 0,
+      "min": -0.580707,
+      "max": 0.903695,
+      "mean": 0.467438,
+      "median": 0.468097,
+      "std": 0.156788,
+      "p1": 0.094385,
+      "p99": 0.767347,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:45:52.406685+00:00"
+    },
+    {
+      "feature_name": "NDWI",
+      "year": "2025",
+      "tile": "tile1",
+      "tile_identifier": "0000000000-0000000000",
+      "source_filename": "Chittoor_Sentinel2_2025_Multispectral-0000000000-0000000000.tif",
+      "formula": "(B3 - B8) / (B3 + B8)",
+      "source_bands": [
+        "B3",
+        "B8"
+      ],
+      "output_filename": "sentinel2_2025_tile1_ndwi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 13568,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 78.19924379788847,
+        "top": 13.782132752018523,
+        "right": 79.41807797538183,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 174932224,
+      "valid_pixel_count": 64153381,
+      "invalid_pixel_count": 110778843,
+      "pct_finite": 36.6733,
+      "pct_gt_zero": 0.6785,
+      "out_of_range_count": 0,
+      "min": -0.818647,
+      "max": 0.718237,
+      "mean": -0.49608,
+      "median": -0.507897,
+      "std": 0.113331,
+      "p1": -0.67828,
+      "p99": -0.125463,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:45:52.509880+00:00"
+    },
+    {
+      "feature_name": "NDBI",
+      "year": "2025",
+      "tile": "tile1",
+      "tile_identifier": "0000000000-0000000000",
+      "source_filename": "Chittoor_Sentinel2_2025_Multispectral-0000000000-0000000000.tif",
+      "formula": "(B11 - B8) / (B11 + B8)",
+      "source_bands": [
+        "B11",
+        "B8"
+      ],
+      "output_filename": "sentinel2_2025_tile1_ndbi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 13568,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 78.19924379788847,
+        "top": 13.782132752018523,
+        "right": 79.41807797538183,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 174932224,
+      "valid_pixel_count": 64153381,
+      "invalid_pixel_count": 110778843,
+      "pct_finite": 36.6733,
+      "pct_gt_zero": 62.1727,
+      "out_of_range_count": 0,
+      "min": -0.789965,
+      "max": 0.670571,
+      "mean": 0.023505,
+      "median": 0.040604,
+      "std": 0.116392,
+      "p1": -0.277116,
+      "p99": 0.223877,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:45:52.607247+00:00"
+    },
+    {
+      "feature_name": "NDVI",
+      "year": "2025",
+      "tile": "tile2",
+      "tile_identifier": "0000000000-0000013568",
+      "source_filename": "Chittoor_Sentinel2_2025_Multispectral-0000000000-0000013568.tif",
+      "formula": "(B8 - B4) / (B8 + B4)",
+      "source_bands": [
+        "B8",
+        "B4"
+      ],
+      "output_filename": "sentinel2_2025_tile2_ndvi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 4195,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 79.41807797538183,
+        "top": 13.782132752018523,
+        "right": 79.79492123706997,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 54086135,
+      "valid_pixel_count": 5105619,
+      "invalid_pixel_count": 48980516,
+      "pct_finite": 9.4398,
+      "pct_gt_zero": 98.753,
+      "out_of_range_count": 0,
+      "min": -1.0,
+      "max": 0.895532,
+      "mean": 0.532182,
+      "median": 0.556719,
+      "std": 0.190653,
+      "p1": -0.074276,
+      "p99": 0.808763,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:46:22.938876+00:00"
+    },
+    {
+      "feature_name": "NDWI",
+      "year": "2025",
+      "tile": "tile2",
+      "tile_identifier": "0000000000-0000013568",
+      "source_filename": "Chittoor_Sentinel2_2025_Multispectral-0000000000-0000013568.tif",
+      "formula": "(B3 - B8) / (B3 + B8)",
+      "source_bands": [
+        "B3",
+        "B8"
+      ],
+      "output_filename": "sentinel2_2025_tile2_ndwi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 4195,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 79.41807797538183,
+        "top": 13.782132752018523,
+        "right": 79.79492123706997,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 54086135,
+      "valid_pixel_count": 5105619,
+      "invalid_pixel_count": 48980516,
+      "pct_finite": 9.4398,
+      "pct_gt_zero": 1.5396,
+      "out_of_range_count": 0,
+      "min": -0.806067,
+      "max": 1.0,
+      "mean": -0.514124,
+      "median": -0.53872,
+      "std": 0.153654,
+      "p1": -0.696995,
+      "p99": 0.19669,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:46:22.938876+00:00"
+    },
+    {
+      "feature_name": "NDBI",
+      "year": "2025",
+      "tile": "tile2",
+      "tile_identifier": "0000000000-0000013568",
+      "source_filename": "Chittoor_Sentinel2_2025_Multispectral-0000000000-0000013568.tif",
+      "formula": "(B11 - B8) / (B11 + B8)",
+      "source_bands": [
+        "B11",
+        "B8"
+      ],
+      "output_filename": "sentinel2_2025_tile2_ndbi.tif",
+      "dtype": "float32",
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "dimensions": {
+        "width": 4195,
+        "height": 12893
+      },
+      "bounds": {
+        "left": 79.41807797538183,
+        "top": 13.782132752018523,
+        "right": 79.79492123706997,
+        "bottom": 12.623934856203224
+      },
+      "total_pixels": 54086135,
+      "valid_pixel_count": 5105619,
+      "invalid_pixel_count": 48980516,
+      "pct_finite": 9.4398,
+      "pct_gt_zero": 38.2437,
+      "out_of_range_count": 0,
+      "min": -0.763795,
+      "max": 1.0,
+      "mean": -0.044425,
+      "median": -0.042573,
+      "std": 0.127038,
+      "p1": -0.323215,
+      "p99": 0.209906,
+      "processing_script": "generate_sentinel2_features.py v1.0",
+      "processing_date": "2026-09-06T06:46:22.954496+00:00"
+    }
+  ]
+}

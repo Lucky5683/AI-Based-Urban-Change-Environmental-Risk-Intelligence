@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "title": "Spatial Statistical Validation Manifest",
+    "region": "Chittoor District, Andhra Pradesh, India",
+    "execution_date_utc": "2026-09-06T07:50:06.877454+00:00",
+    "script_version": "spatial_statistical_validation.py v1.0",
+    "primary_analysis_scale": "1 km aggregated grid (100x100 native pixels)",
+    "sensitivity_scale": "500 m aggregated grid (50x50 native pixels)",
+    "spatial_dependence_method": "Global Moran's I with distance-threshold contiguity",
+    "multiple_testing_correction": "Benjamini-Hochberg False Discovery Rate (FDR)",
+    "raw_and_processed_files_modified": 0,
+    "immutability_passed": true
+  },
+  "spatial_autocorrelation_1km": {
+    "mean_ndbi_change": {
+      "morans_i": 0.7131,
+      "expected_i": -0.00014,
+      "z_score": 59.24,
+      "p_value": 0.0
+    },
+    "mean_ndvi_change": {
+      "morans_i": 0.6516,
+      "expected_i": -0.00014,
+      "z_score": 54.13,
+      "p_value": 0.0
+    },
+    "dw_builtup_prop": {
+      "morans_i": 0.4454,
+      "expected_i": -0.00014,
+      "z_score": 37.01,
+      "p_value": 0.0
+    }
+  },
+  "statistical_tests": [
+    {
+      "rq_id": "RQ1 (Primary)",
+      "x_name": "NDBI Increase Proportion",
+      "y_name": "Dynamic World Built-Up Proportion",
+      "scale": "1 km",
+      "n_cells": 6902,
+      "pearson_r": 0.0427,
+      "pearson_p": 0.0003877743747863934,
+      "pearson_ci": [
+        0.0191,
+        0.0662
+      ],
+      "spearman_rho": 0.1779,
+      "spearman_p": 3.685906335152701e-50,
+      "slope": 0.01361,
+      "intercept": 0.02005,
+      "r_squared": 0.0018,
+      "residual_std": 0.03382,
+      "residual_moran_i": 0.4462,
+      "residual_moran_z": 37.08,
+      "adjusted_p_value": 0.0003877743747863934
+    },
+    {
+      "rq_id": "RQ1 (Sensitivity)",
+      "x_name": "NDBI Increase Proportion",
+      "y_name": "Dynamic World Built-Up Proportion",
+      "scale": "500 m",
+      "n_cells": 27669,
+      "pearson_r": 0.0261,
+      "pearson_p": 1.4393924086551927e-05,
+      "pearson_ci": [
+        0.0143,
+        0.0378
+      ],
+      "spearman_rho": 0.1576,
+      "spearman_p": 2.2496613946317774e-153,
+      "slope": 0.00978,
+      "intercept": 0.02052,
+      "r_squared": 0.0007,
+      "residual_std": 0.04774,
+      "residual_moran_i": null,
+      "residual_moran_z": null,
+      "adjusted_p_value": 1.7272708903862312e-05
+    },
+    {
+      "rq_id": "RQ1-B (Primary)",
+      "x_name": "Mean NDBI Change",
+      "y_name": "Dynamic World Built-Up Proportion",
+      "scale": "1 km",
+      "n_cells": 6902,
+      "pearson_r": -0.0755,
+      "pearson_p": 3.443753415630687e-10,
+      "pearson_ci": [
+        -0.0989,
+        -0.052
+      ],
+      "spearman_rho": -0.211,
+      "spearman_p": 2.700327355667816e-70,
+      "slope": -0.05796,
+      "intercept": 0.02216,
+      "r_squared": 0.0057,
+      "residual_std": 0.03375,
+      "residual_moran_i": 0.4428,
+      "residual_moran_z": 36.8,
+      "adjusted_p_value": 5.16563012344603e-10
+    },
+    {
+      "rq_id": "Spectral Coupling (Primary)",
+      "x_name": "NDVI Decrease Proportion",
+      "y_name": "NDBI Increase Proportion",
+      "scale": "1 km",
+      "n_cells": 6902,
+      "pearson_r": 0.8326,
+      "pearson_p": 0.0,
+      "pearson_ci": [
+        0.8252,
+        0.8397
+      ],
+      "spearman_rho": 0.8296,
+      "spearman_p": 0.0,
+      "slope": 0.82577,
+      "intercept": 0.00915,
+      "r_squared": 0.6932,
+      "residual_std": 0.05883,
+      "residual_moran_i": 0.4648,
+      "residual_moran_z": 38.62,
+      "adjusted_p_value": 0.0
+    },
+    {
+      "rq_id": "Spectral Coupling (Sensitivity)",
+      "x_name": "NDVI Decrease Proportion",
+      "y_name": "NDBI Increase Proportion",
+      "scale": "500 m",
+      "n_cells": 27669,
+      "pearson_r": 0.7958,
+      "pearson_p": 0.0,
+      "pearson_ci": [
+        0.7915,
+        0.8001
+      ],
+      "spearman_rho": 0.8118,
+      "spearman_p": 0.0,
+      "slope": 0.78452,
+      "intercept": 0.01527,
+      "r_squared": 0.6333,
+      "residual_std": 0.07713,
+      "residual_moran_i": null,
+      "residual_moran_z": null,
+      "adjusted_p_value": 0.0
+    },
+    {
+      "rq_id": "Spectral Coupling Mean (Primary)",
+      "x_name": "Mean NDVI Change",
+      "y_name": "Mean NDBI Change",
+      "scale": "1 km",
+      "n_cells": 6902,
+      "pearson_r": -0.8014,
+      "pearson_p": 0.0,
+      "pearson_ci": [
+        -0.8097,
+        -0.7928
+      ],
+      "spearman_rho": -0.8354,
+      "spearman_p": 0.0,
+      "slope": -0.74669,
+      "intercept": 0.01052,
+      "r_squared": 0.6423,
+      "residual_std": 0.02636,
+      "residual_moran_i": 0.3988,
+      "residual_moran_z": 33.14,
+      "adjusted_p_value": 0.0
+    }
+  ],
+  "untestable_hypotheses": {
+    "RQ2_builtup_vs_lst": "NOT TESTABLE at cell level (LST only available as district aggregate).",
+    "RQ3_ndvi_vs_lst": "NOT TESTABLE at cell level (LST only available as district aggregate).",
+    "RQ4_ndvi_vs_rainfall": "NOT TESTABLE at cell level (Rainfall only available as district aggregate)."
+  },
+  "outputs": {
+    "results_table_csv": "outputs\\tables\\spatial_statistical_validation.csv",
+    "figures": [
+      "outputs/figures/statistical_spatial/ndbi_change_vs_dw_builtup.png",
+      "outputs/figures/statistical_spatial/ndvi_change_vs_ndbi_change.png",
+      "outputs/figures/statistical_spatial/spatial_autocorrelation_moran.png",
+      "outputs/figures/statistical_spatial/sensitivity_scale_comparison.png"
+    ]
+  }
+}

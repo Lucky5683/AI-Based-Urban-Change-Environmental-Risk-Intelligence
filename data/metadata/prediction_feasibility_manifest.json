@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "title": "Predictive Modeling & Forecasting Feasibility Manifest",
+    "region": "Chittoor District, Andhra Pradesh, India",
+    "execution_date_utc": "2026-09-06T08:10:06.642759+00:00",
+    "script_name": "evaluate_prediction_feasibility.py",
+    "governing_principle": "DO NOT TRAIN A MODEL JUST TO CLAIM 'AI'. Prediction allowed only when scientifically defensible.",
+    "raw_and_processed_files_modified": 0,
+    "immutability_passed": true
+  },
+  "target_classifications": {
+    "Category_A_Recommended": [
+      "built_up_km2 (Total Built-Up Area)",
+      "strong_built_up_km2 (Strong Built-Up Core)"
+    ],
+    "Category_B_Possible_High_Uncertainty": [
+      "NDVI (Annual Vegetation Index)"
+    ],
+    "Category_C_Not_Defensible_or_Feasible": [
+      "LST_C (Annual Daytime Land Surface Temperature)",
+      "rainfall_mm (Annual Precipitation)",
+      "environmental_stress_grid_1km (Decadal Spatial Stress Grid)",
+      "sentinel2_multispectral_imagery (Satellite Image Deep Learning)"
+    ]
+  },
+  "built_up_forecast_2026": {
+    "target": "built_up_km2",
+    "last_observed_2025_km2": 259.2079865229703,
+    "point_forecast_2026_km2": 270.32,
+    "linear_trend_slope_km2_per_year": 11.0931,
+    "r2": 0.96,
+    "p_value": 7.09e-07,
+    "pi_95_lower_km2": 250.02,
+    "pi_95_upper_km2": 290.62,
+    "margin_of_error_95_km2": 20.3,
+    "walk_forward_mae_km2": 8.07,
+    "naive_baseline_mae_km2": 14.44,
+    "improvement_over_baseline_pct": 44.1
+  },
+  "validation_strategy": {
+    "method": "Chronological Walk-Forward Rolling Origin",
+    "splits": [
+      {
+        "train": "2016-2021",
+        "test": 2022
+      },
+      {
+        "train": "2016-2022",
+        "test": 2023
+      },
+      {
+        "train": "2016-2023",
+        "test": 2024
+      },
+      {
+        "train": "2016-2024",
+        "test": 2025
+      }
+    ],
+    "data_leakage_mitigation": "Strict temporal lag protocol T-1 -> T; zero concurrent non-lagged predictors."
+  },
+  "audit_summary": {
+    "n_inventory_records": 9,
+    "n_feasibility_matrix_records": 7,
+    "n_model_comparison_evaluations": 15
+  }
+}

@@ -1,0 +1,12 @@
+audit_item,expected,observed,status,notes
+Total Rows (Observations),10,10,PASS,Years 2016 to 2025 inclusive
+Total Columns,14,14,PASS,All environmental and land-cover variables present
+Duplicate Rows,0,0,PASS,No duplicate records
+Missing Values (Total),0,0,PASS,Zero missing entries across all columns
+Year Range Min,2016,2016,PASS,Historical start year
+Year Range Max,2025,2025,PASS,Historical end year
+Variable: built_up_km2 [km²],"Range [150.0, 270.0], 0 nulls","Min: 159.40, Max: 259.21, Nulls: 0",PASS,10-yr Mean: 209.31 km²
+Variable: strong_built_up_km2 [km²],"Range [35.0, 75.0], 0 nulls","Min: 36.49, Max: 69.01, Nulls: 0",PASS,10-yr Mean: 50.98 km²
+Variable: NDVI [dimensionless],"Range [0.25, 0.5], 0 nulls","Min: 0.28, Max: 0.46, Nulls: 0",PASS,10-yr Mean: 0.41 dimensionless
+Variable: LST_C [°C],"Range [25.0, 36.0], 0 nulls","Min: 28.56, Max: 34.37, Nulls: 0",PASS,10-yr Mean: 32.25 °C
+Variable: rainfall_mm [mm],"Range [700.0, 1500.0], 0 nulls","Min: 753.08, Max: 1414.74, Nulls: 0",PASS,10-yr Mean: 1155.22 mm

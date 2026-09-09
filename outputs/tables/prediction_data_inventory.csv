@@ -1,0 +1,10 @@
+variable_name,display_target,start_year,end_year,n_observations,missing_count,temporal_frequency,spatial_resolution,primary_data_source,notes
+built_up_km2,Total Built-Up Area (km²),2016,2025,10,0,Annual,District aggregate (derived from 10m Dynamic World),Google Dynamic World Land Cover,Monotonically increasing series tracking urban expansion.
+strong_built_up_km2,Strong Built-Up Core (km²),2016,2025,10,0,Annual,District aggregate (derived from 10m Dynamic World),Google Dynamic World Land Cover,High-confidence dense urban core expansion.
+NDVI,Normalized Difference Vegetation Index,2016,2025,10,0,Annual,District aggregate (Landsat/Sentinel composite),USGS/NASA Landsat & ESA Sentinel-2,Substantial interannual variability governed by monsoon precipitation.
+LST_C,Land Surface Temperature (°C),2016,2025,10,0,Annual,District aggregate (1km MODIS grid),NASA MODIS Terra (MOD11A2),Daytime 8-day composite aggregate; confounded by weather and cloud cover.
+rainfall_mm,Annual Precipitation (mm),2016,2025,10,0,Annual,District aggregate (0.05° grid),UCSB CHIRPS Pentad Precipitation,Stochastic meteorological driver; high interannual variance.
+rainfall_anomaly_mm,Precipitation Anomaly (mm),2016,2025,10,0,Annual,District aggregate (0.05° grid),UCSB CHIRPS Pentad Precipitation,Departure from 1981-2010 historical climate normal.
+environmental_stress,District Environmental Stress Index (GEE),2016,2025,10,0,Annual,District aggregate,GEE Multi-sensor composite index,Exploratory composite score; circular overlap with component variables.
+environmental_stress_grid_1km,Decadal Spatial Stress Grid (1 km),2016,2025,1,0,Decadal transition (Single step),"1 km spatial grid (N = 6,902 cells)",Sentinel-2 + Dynamic World decadal changes,Single temporal delta state (2016 -> 2025). Spatial cells do NOT increase temporal N.
+sentinel2_multispectral_imagery,Raw Sentinel-2 Imagery (10m),2016,2025,2,0,Decadal snapshots (Two image dates),10 m native pixels (4 tiles),ESA Copernicus Sentinel-2 MSI,Only 2 temporal image states exist; insufficient for video/CNN forecasting.

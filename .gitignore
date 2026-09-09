@@ -1,0 +1,61 @@
+# ==============================================================================
+# AI-Based Urban Change & Environmental Risk Intelligence - .gitignore
+# ==============================================================================
+
+# 1. Python cache & compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# 2. Virtual environments
+venv/
+env/
+.venv/
+.conda/
+ENV/
+env.bak/
+venv.bak/
+
+# 3. Environment & secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# 4. Jupyter temporary files & checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# 5. Large geospatial rasters (DO NOT COMMIT ~4.8 GB OF TIFS)
+*.tif
+*.tiff
+*.TIF
+*.TIFF
+data/raw/satellite/*.tif
+data/processed/features/*.tif
+data/processed/change_detection/*.tif
+data/processed/satellite/*.tif
+
+# 6. Common OS & IDE generated files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 7. Explicitly keep tracked lightweight project assets
+!data/raw/boundaries/chittoor_mandals.geojson
+!data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv
+!data/metadata/*.json
+!outputs/tables/*.csv
+!outputs/figures/**/*.png
+!notebooks/*.ipynb
+!scripts/*.py
+!dashboard/**/*.py
+!dashboard/assets/*.css
+!requirements.txt
+!README.md
+!LICENSE

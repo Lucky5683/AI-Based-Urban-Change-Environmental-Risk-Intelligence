@@ -1,0 +1,37 @@
+dashboard_metric,displayed_value,unit,source_file,source_column,validated_value,difference,status
+2025 Total Built-Up Area,259.21,km²,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,built_up_km2 (row 9),259.21,0.00,PASS
+2016 Total Built-Up Area (Baseline),159.40,km²,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,built_up_km2 (row 0),159.40,0.00,PASS
+Net Built-Up Expansion (2016->2025),+99.81,km²,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,built_up_km2 (2025 - 2016),99.81,0.00,PASS
+Relative Built-Up Growth Rate,+62.6,%,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,built_up_km2 ((2025-2016)/2016*100),62.62,-0.02 (Rounding),PASS
+2025 Strong Core Urban Area,69.01,km²,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,strong_built_up_km2 (row 9),69.01,0.00,PASS
+2016 Strong Core Urban Area (Baseline),36.49,km²,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,strong_built_up_km2 (row 0),36.49,0.00,PASS
+2025 Mean NDVI,0.4566,dimensionless,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,NDVI (row 9),0.4566,0.0000,PASS
+2016 Mean NDVI (Baseline),0.4550,dimensionless,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,NDVI (row 0),0.4550,0.0000,PASS
+2019 Minimum NDVI (Drought Dip),0.2840,dimensionless,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,NDVI (row 3),0.2840,0.0000,PASS
+2025 Daytime LST,28.56,°C,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,LST_C (row 9),28.56,0.00,PASS
+2016 Daytime LST (Baseline),33.94,°C,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,LST_C (row 0),33.94,0.00,PASS
+2025 Annual Precipitation,1158.41,mm,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,rainfall_mm (row 9),1158.41,0.00,PASS
+2016 Annual Precipitation (Baseline),753.08,mm,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,rainfall_mm (row 0),753.08,0.00,PASS
+10-Year Mean Annual Rainfall,1155.22,mm,data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv,rainfall_mm (mean),1155.22,0.00,PASS
+2026 Total Built-Up Point Forecast,270.32,km²,outputs/tables/builtup_forecast_2026.csv,point_forecast (Total Built-Up),270.32,0.00,PASS
+2026 Total Built-Up 95% PI Lower,250.02,km²,outputs/tables/builtup_forecast_2026.csv,lower_95 (Total Built-Up),250.02,0.00,PASS
+2026 Total Built-Up 95% PI Upper,290.62,km²,outputs/tables/builtup_forecast_2026.csv,upper_95 (Total Built-Up),290.62,0.00,PASS
+2026 Strong Core Point Forecast,70.31,km²,outputs/tables/builtup_forecast_2026.csv,point_forecast (Strong Built-Up),70.31,0.00,PASS
+2026 Strong Core 95% PI Lower,64.75,km²,outputs/tables/builtup_forecast_2026.csv,lower_95 (Strong Built-Up),64.75,0.00,PASS
+2026 Strong Core 95% PI Upper,75.87,km²,outputs/tables/builtup_forecast_2026.csv,upper_95 (Strong Built-Up),75.87,0.00,PASS
+1 km Spatial Stress Grid Mean,0.2213,"dimensionless [0, 1]",outputs/tables/environmental_stress_grid_1km.csv,stress_score (mean),0.2213,0.0000,PASS
+1 km Peak Environmental Stress (Cell C_052_166),0.6771,"dimensionless [0, 1]",outputs/tables/environmental_stress_grid_1km.csv,stress_score (max),0.6771,0.0000,PASS
+Total Valid 1 km Grid Cells,6902,cells,outputs/tables/environmental_stress_grid_1km.csv,cell_id (count),6902,0,PASS
+Common Valid Sentinel-2 Footprint,6702.08,km²,data/metadata/sentinel2_change_detection_manifest.json,common_valid_pixels (geodesic),6702.08,0.00,PASS
+Built-Up vs LST Pearson Correlation,-0.8271,dimensionless,docs/research_log/06_statistical_analysis.md,Pearson r,-0.8271,0.0000,PASS
+Built-Up vs LST p-value,0.0032,dimensionless,docs/research_log/06_statistical_analysis.md,p-value,0.0032,0.0000,PASS
+NDVI vs LST Pearson Correlation,-0.4458,dimensionless,docs/research_log/06_statistical_analysis.md,Pearson r,-0.4458,0.0000,PASS
+NDVI vs LST p-value,0.1970,dimensionless,docs/research_log/06_statistical_analysis.md,p-value,0.1970,0.0000,PASS
+Rainfall vs NDVI Pearson Correlation,-0.0789,dimensionless,docs/research_log/06_statistical_analysis.md,Pearson r,-0.0789,0.0000,PASS
+Rainfall vs NDVI p-value,0.8280,dimensionless,docs/research_log/06_statistical_analysis.md,p-value,0.8280,0.0000,PASS
+NDVI Decrease (>0.10) Screening Area,951.56,km²,data/metadata/sentinel2_change_detection_manifest.json,ndvi.negative_screening.area_km2_geodesic,951.56,0.00,PASS
+NDVI Increase (>0.10) Screening Area,1188.84,km²,data/metadata/sentinel2_change_detection_manifest.json,ndvi.positive_screening.area_km2_geodesic,1188.84,0.00,PASS
+NDWI Decrease (>0.10) Screening Area,377.04,km²,data/metadata/sentinel2_change_detection_manifest.json,ndwi.negative_screening.area_km2_geodesic,377.04,0.00,PASS
+NDWI Increase (>0.10) Screening Area,581.42,km²,data/metadata/sentinel2_change_detection_manifest.json,ndwi.positive_screening.area_km2_geodesic,581.42,0.00,PASS
+NDBI Decrease (<-0.10) Screening Area,829.42,km²,data/metadata/sentinel2_change_detection_manifest.json,ndbi.negative_screening.area_km2_geodesic,829.42,0.00,PASS
+NDBI Increase (>+0.10) Screening Area,849.15,km²,data/metadata/sentinel2_change_detection_manifest.json,ndbi.positive_screening.area_km2_geodesic,849.15,0.00,PASS

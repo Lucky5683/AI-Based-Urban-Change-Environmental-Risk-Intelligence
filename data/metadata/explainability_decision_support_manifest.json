@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "Explainability & Decision-Support Integration Manifest",
+    "region": "Chittoor District, Andhra Pradesh, India",
+    "execution_date_utc": "2026-09-06T08:23:27.425638+00:00",
+    "script_name": "generate_explainability_decision_support.py",
+    "version": "1.0",
+    "governing_principle": "DO NOT TRAIN A MODEL JUST TO CLAIM 'AI'. Convert analytical findings into interpretable decision support."
+  },
+  "source_datasets": [
+    "outputs/tables/environmental_stress_grid_1km.csv",
+    "outputs/tables/environmental_stress_rankings.csv",
+    "outputs/tables/spatial_statistical_validation.csv",
+    "outputs/tables/builtup_forecast_2026.csv",
+    "data/processed/Chittoor_Master_Research_Dataset_2016_2025.csv"
+  ],
+  "stress_score_formulation": {
+    "equation": "StressScore = (C_urb + C_veg + C_wat) / 3",
+    "weights": {
+      "urbanization": 0.3333,
+      "vegetation": 0.3333,
+      "water": 0.3333
+    },
+    "weighting_rationale": "Transparent equal-weight baseline selected after high correlation with data-driven PCA (r = 0.9279)."
+  },
+  "evidence_categories": [
+    "Baseline / Low",
+    "Low (Single Evidence Family)",
+    "Moderate (Compound Moisture/Vegetation Stress)",
+    "Moderate (Same-Sensor Spectral Agreement)",
+    "Moderate (Compound Urban/Water Signal)",
+    "High (Multi-Source Convergence)"
+  ],
+  "decision_support_rules": {
+    "priority_monitoring": "Q4 High Stress + High Multi-Source Convergence",
+    "urbanization_monitoring": "Q4 High Stress + Urbanization Dominates",
+    "vegetation_monitoring": "Q4 High Stress + Vegetation Dominates",
+    "water_monitoring": "Q4 High Stress + Water/Moisture Dominates"
+  },
+  "confidence_framework": {
+    "HIGH": "Multiple independent evidence families converge (e.g. cross-sensor, validated statistical association).",
+    "MODERATE": "Multiple indicators agree, but some share common sensor ancestry (e.g. Sentinel-2 NDBI + Dynamic World).",
+    "LOW": "Single evidence family or uncorroborated spectral dip."
+  },
+  "generated_outputs": {
+    "tables": [
+      "outputs/tables/environmental_stress_explainability.csv",
+      "outputs/tables/top_100_environmental_stress_cells.csv",
+      "outputs/tables/decision_support_matrix.csv",
+      "outputs/tables/executive_decision_summary.csv"
+    ],
+    "figures": [
+      "outputs/figures/decision_support/environmental_stress_explainability_map.png",
+      "outputs/figures/decision_support/environmental_stress_components.png",
+      "outputs/figures/decision_support/top_stress_evidence.png",
+      "outputs/figures/decision_support/forecast_decision_context.png"
+    ]
+  }
+}

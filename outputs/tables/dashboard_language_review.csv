@@ -1,0 +1,3 @@
+file,line_or_component,phrase,severity,recommended_replacement
+dashboard\app.py,Line 538,guaranteed,Low (Defensive Negation),Preserve cautionary disclaimer
+dashboard\app.py,Line 613,building collapse,Low (Defensive Negation),Preserve cautionary disclaimer

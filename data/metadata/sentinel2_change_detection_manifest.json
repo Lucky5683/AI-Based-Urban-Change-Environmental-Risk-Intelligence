@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "title": "Sentinel-2 Spectral Change Detection Manifest (2016 -> 2025)",
+    "region": "Chittoor District, Andhra Pradesh, India",
+    "execution_date_utc": "2026-09-06T07:01:28.522232+00:00",
+    "script_version": "detect_sentinel2_change.py v1.0",
+    "crs": "EPSG:4326 (WGS84)",
+    "methodology": "Block-streamed pixel difference with common-valid mask",
+    "comparability_rule": "Difference computed only where 2016_valid_mask == 1 AND 2025_valid_mask == 1. All non-common pixels set to NaN.",
+    "temporal_limitation": "2016 -> 2025 differences represent differences between the available annual composite states and should not automatically be interpreted as a pure long-term land-cover trend.",
+    "spatial_integrity_passed": true,
+    "immutability_passed": true,
+    "raw_and_feature_files_modified": 0
+  },
+  "features": {
+    "ndvi": {
+      "title": "NDVI (Normalized Difference Vegetation Index)",
+      "diff_label": "\u0394NDVI (2025 - 2016)",
+      "tiles": {
+        "tile1": {
+          "feature": "ndvi",
+          "tile": "tile1",
+          "out_filename": "sentinel2_tile1_ndvi_change_2016_2025.tif",
+          "out_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\change_detection\\sentinel2_tile1_ndvi_change_2016_2025.tif",
+          "source_2016_raster": "sentinel2_2016_tile1_ndvi.tif",
+          "source_2025_raster": "sentinel2_2025_tile1_ndvi.tif",
+          "formula": "NDVI_change = NDVI_2025 - NDVI_2016",
+          "common_valid_mask_rule": "2016_valid_mask == 1 AND 2025_valid_mask == 1 AND finite(f16) AND finite(f25)",
+          "crs": "EPSG:4326",
+          "resolution": [
+            8.983152841195215e-05,
+            8.983152841195215e-05
+          ],
+          "dimensions": {
+            "width": 13568,
+            "height": 12893
+          },
+          "bounds": {
+            "left": 78.19924379788847,
+            "bottom": 12.623934856203224,
+            "right": 79.41807797538183,
+            "top": 13.782132752018523
+          },
+          "pixel_area_km2_geodesic": 9.677251838356328e-05,
+          "pixel_area_km2_nominal": 0.0001,
+          "total_pixels": 174932224,
+          "common_valid_pixels": 64152235,
+          "nan_pixels": 110779989,
+          "valid_percentage": 36.6726,
+          "nan_percentage": 63.3274,
+          "min": -1.226124,
+          "max": 1.258798,
+          "mean": 0.001953,
+          "median": 0.0025,
+          "std": 0.120405,
+          "percentiles": {
+            "p1": -0.3575,
+            "p5": -0.1895,
+            "p25": -0.0575,
+            "p75": 0.0655,
+            "p95": 0.1925,
+            "p99": 0.3105
+          },
+          "screening": {
+            "negative_screening": {
+              "threshold": -0.1,
+              "label": "vegetation-related spectral decrease",
+              "count": 9183368,
+              "percent_of_valid": 14.315,
+              "area_km2_geodesic": 888.7,
+              "area_km2_nominal": 918.34
+            },
+            "positive_screening": {
+              "threshold": 0.1,
+              "label": "vegetation-related spectral increase",
+              "count": 10579633,
+              "percent_of_valid": 16.4914,
+              "area_km2_geodesic": 1023.82,
+              "area_km2_nominal": 1057.96
+            }
+          },
+          "spatial_integrity": {
+            "crs_match": true,
+            "dimensions_match": true,
+            "resolution_match": true,
+            "transform_match": true,
+            "bounds_match": true,
+            "passed": true
+          }
+        },
+        "tile2": {
+          "feature": "ndvi",
+          "tile": "tile2",
+          "out_filename": "sentinel2_tile2_ndvi_change_2016_2025.tif",
+          "out_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\change_detection\\sentinel2_tile2_ndvi_change_2016_2025.tif",
+          "source_2016_raster": "sentinel2_2016_tile2_ndvi.tif",
+          "source_2025_raster": "sentinel2_2025_tile2_ndvi.tif",
+          "formula": "NDVI_change = NDVI_2025 - NDVI_2016",
+          "common_valid_mask_rule": "2016_valid_mask == 1 AND 2025_valid_mask == 1 AND finite(f16) AND finite(f25)",
+          "crs": "EPSG:4326",
+          "resolution": [
+            8.983152841195215e-05,
+            8.983152841195215e-05
+          ],
+          "dimensions": {
+            "width": 4195,
+            "height": 12893
+          },
+          "bounds": {
+            "left": 79.41807797538183,
+            "bottom": 12.623934856203224,
+            "right": 79.79492123706997,
+            "top": 13.782132752018523
+          },
+          "pixel_area_km2_geodesic": 9.677251838356328e-05,
+          "pixel_area_km2_nominal": 0.0001,
+          "total_pixels": 54086135,
+          "common_valid_pixels": 5103779,
+          "nan_pixels": 48982356,
+          "valid_percentage": 9.4364,
+          "nan_percentage": 90.5636,
+          "min": -1.741726,
+          "max": 1.498245,
+          "mean": 0.047318,
+          "median": 0.0435,
+          "std": 0.15771,
+          "percentiles": {
+            "p1": -0.3995,
+            "p5": -0.2155,
+            "p25": -0.0295,
+            "p75": 0.1355,
+            "p95": 0.2985,
+            "p99": 0.4335
+          },
+          "screening": {
+            "negative_screening": {
+              "threshold": -0.1,
+              "label": "vegetation-related spectral decrease",
+              "count": 649543,
+              "percent_of_valid": 12.7267,
+              "area_km2_geodesic": 62.86,
+              "area_km2_nominal": 64.95
+            },
+            "positive_screening": {
+              "threshold": 0.1,
+              "label": "vegetation-related spectral increase",
+              "count": 1705221,
+              "percent_of_valid": 33.4109,
+              "area_km2_geodesic": 165.02,
+              "area_km2_nominal": 170.52
+            }
+          },
+          "spatial_integrity": {
+            "crs_match": true,
+            "dimensions_match": true,
+            "resolution_match": true,
+            "transform_match": true,
+            "bounds_match": true,
+            "passed": true
+          }
+        }
+      },
+      "district_aggregate": {
+        "total_pixels": 229018359,
+        "common_valid_pixels": 69256014,
+        "nan_pixels": 159762345,
+        "valid_percentage": 30.2404,
+        "nan_percentage": 69.7596,
+        "district_weighted_mean": 0.005296,
+        "negative_screening": {
+          "threshold": -0.1,
+          "label": "vegetation-related spectral decrease",
+          "count": 9832911,
+          "percent_of_valid": 14.1979,
+          "area_km2_geodesic": 951.56,
+          "area_km2_nominal": 983.29
+        },
+        "positive_screening": {
+          "threshold": 0.1,
+          "label": "vegetation-related spectral increase",
+          "count": 12284854,
+          "percent_of_valid": 17.7383,
+          "area_km2_geodesic": 1188.84,
+          "area_km2_nominal": 1228.48
+        }
+      }
+    },
+    "ndwi": {
+      "title": "NDWI (Normalized Difference Water Index)",
+      "diff_label": "\u0394NDWI (2025 - 2016)",
+      "tiles": {
+        "tile1": {
+          "feature": "ndwi",
+          "tile": "tile1",
+          "out_filename": "sentinel2_tile1_ndwi_change_2016_2025.tif",
+          "out_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\change_detection\\sentinel2_tile1_ndwi_change_2016_2025.tif",
+          "source_2016_raster": "sentinel2_2016_tile1_ndwi.tif",
+          "source_2025_raster": "sentinel2_2025_tile1_ndwi.tif",
+          "formula": "NDWI_change = NDWI_2025 - NDWI_2016",
+          "common_valid_mask_rule": "2016_valid_mask == 1 AND 2025_valid_mask == 1 AND finite(f16) AND finite(f25)",
+          "crs": "EPSG:4326",
+          "resolution": [
+            8.983152841195215e-05,
+            8.983152841195215e-05
+          ],
+          "dimensions": {
+            "width": 13568,
+            "height": 12893
+          },
+          "bounds": {
+            "left": 78.19924379788847,
+            "bottom": 12.623934856203224,
+            "right": 79.41807797538183,
+            "top": 13.782132752018523
+          },
+          "pixel_area_km2_geodesic": 9.677251838356328e-05,
+          "pixel_area_km2_nominal": 0.0001,
+          "total_pixels": 174932224,
+          "common_valid_pixels": 64152235,
+          "nan_pixels": 110779989,
+          "valid_percentage": 36.6726,
+          "nan_percentage": 63.3274,
+          "min": -1.313325,
+          "max": 1.301298,
+          "mean": 0.011899,
+          "median": 0.0065,
+          "std": 0.085915,
+          "percentiles": {
+            "p1": -0.1805,
+            "p5": -0.0995,
+            "p25": -0.0285,
+            "p75": 0.0435,
+            "p95": 0.1365,
+            "p99": 0.2895
+          },
+          "screening": {
+            "negative_screening": {
+              "threshold": -0.1,
+              "label": "water-related spectral decrease",
+              "count": 3204045,
+              "percent_of_valid": 4.9944,
+              "area_km2_geodesic": 310.06,
+              "area_km2_nominal": 320.4
+            },
+            "positive_screening": {
+              "threshold": 0.1,
+              "label": "water-related spectral increase",
+              "count": 5500400,
+              "percent_of_valid": 8.574,
+              "area_km2_geodesic": 532.29,
+              "area_km2_nominal": 550.04
+            }
+          },
+          "spatial_integrity": {
+            "crs_match": true,
+            "dimensions_match": true,
+            "resolution_match": true,
+            "transform_match": true,
+            "bounds_match": true,
+            "passed": true
+          }
+        },
+        "tile2": {
+          "feature": "ndwi",
+          "tile": "tile2",
+          "out_filename": "sentinel2_tile2_ndwi_change_2016_2025.tif",
+          "out_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\change_detection\\sentinel2_tile2_ndwi_change_2016_2025.tif",
+          "source_2016_raster": "sentinel2_2016_tile2_ndwi.tif",
+          "source_2025_raster": "sentinel2_2025_tile2_ndwi.tif",
+          "formula": "NDWI_change = NDWI_2025 - NDWI_2016",
+          "common_valid_mask_rule": "2016_valid_mask == 1 AND 2025_valid_mask == 1 AND finite(f16) AND finite(f25)",
+          "crs": "EPSG:4326",
+          "resolution": [
+            8.983152841195215e-05,
+            8.983152841195215e-05
+          ],
+          "dimensions": {
+            "width": 4195,
+            "height": 12893
+          },
+          "bounds": {
+            "left": 79.41807797538183,
+            "bottom": 12.623934856203224,
+            "right": 79.79492123706997,
+            "top": 13.782132752018523
+          },
+          "pixel_area_km2_geodesic": 9.677251838356328e-05,
+          "pixel_area_km2_nominal": 0.0001,
+          "total_pixels": 54086135,
+          "common_valid_pixels": 5103779,
+          "nan_pixels": 48982356,
+          "valid_percentage": 9.4364,
+          "nan_percentage": 90.5636,
+          "min": -1.446567,
+          "max": 1.569779,
+          "mean": -0.006822,
+          "median": -0.0055,
+          "std": 0.112937,
+          "percentiles": {
+            "p1": -0.2815,
+            "p5": -0.1625,
+            "p25": -0.0625,
+            "p75": 0.0405,
+            "p95": 0.1575,
+            "p99": 0.3275
+          },
+          "screening": {
+            "negative_screening": {
+              "threshold": -0.1,
+              "label": "water-related spectral decrease",
+              "count": 692112,
+              "percent_of_valid": 13.5608,
+              "area_km2_geodesic": 66.98,
+              "area_km2_nominal": 69.21
+            },
+            "positive_screening": {
+              "threshold": 0.1,
+              "label": "water-related spectral increase",
+              "count": 507688,
+              "percent_of_valid": 9.9473,
+              "area_km2_geodesic": 49.13,
+              "area_km2_nominal": 50.77
+            }
+          },
+          "spatial_integrity": {
+            "crs_match": true,
+            "dimensions_match": true,
+            "resolution_match": true,
+            "transform_match": true,
+            "bounds_match": true,
+            "passed": true
+          }
+        }
+      },
+      "district_aggregate": {
+        "total_pixels": 229018359,
+        "common_valid_pixels": 69256014,
+        "nan_pixels": 159762345,
+        "valid_percentage": 30.2404,
+        "nan_percentage": 69.7596,
+        "district_weighted_mean": 0.010519,
+        "negative_screening": {
+          "threshold": -0.1,
+          "label": "water-related spectral decrease",
+          "count": 3896157,
+          "percent_of_valid": 5.6257,
+          "area_km2_geodesic": 377.04,
+          "area_km2_nominal": 389.61
+        },
+        "positive_screening": {
+          "threshold": 0.1,
+          "label": "water-related spectral increase",
+          "count": 6008088,
+          "percent_of_valid": 8.6752,
+          "area_km2_geodesic": 581.42,
+          "area_km2_nominal": 600.81
+        }
+      }
+    },
+    "ndbi": {
+      "title": "NDBI (Normalized Difference Built-Up Index)",
+      "diff_label": "\u0394NDBI (2025 - 2016)",
+      "tiles": {
+        "tile1": {
+          "feature": "ndbi",
+          "tile": "tile1",
+          "out_filename": "sentinel2_tile1_ndbi_change_2016_2025.tif",
+          "out_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\change_detection\\sentinel2_tile1_ndbi_change_2016_2025.tif",
+          "source_2016_raster": "sentinel2_2016_tile1_ndbi.tif",
+          "source_2025_raster": "sentinel2_2025_tile1_ndbi.tif",
+          "formula": "NDBI_change = NDBI_2025 - NDBI_2016",
+          "common_valid_mask_rule": "2016_valid_mask == 1 AND 2025_valid_mask == 1 AND finite(f16) AND finite(f25)",
+          "crs": "EPSG:4326",
+          "resolution": [
+            8.983152841195215e-05,
+            8.983152841195215e-05
+          ],
+          "dimensions": {
+            "width": 13568,
+            "height": 12893
+          },
+          "bounds": {
+            "left": 78.19924379788847,
+            "bottom": 12.623934856203224,
+            "right": 79.41807797538183,
+            "top": 13.782132752018523
+          },
+          "pixel_area_km2_geodesic": 9.677251838356328e-05,
+          "pixel_area_km2_nominal": 0.0001,
+          "total_pixels": 174932224,
+          "common_valid_pixels": 64152235,
+          "nan_pixels": 110779989,
+          "valid_percentage": 36.6726,
+          "nan_percentage": 63.3274,
+          "min": -1.085197,
+          "max": 0.899031,
+          "mean": 0.009479,
+          "median": 0.0165,
+          "std": 0.098144,
+          "percentiles": {
+            "p1": -0.2715,
+            "p5": -0.1585,
+            "p25": -0.0395,
+            "p75": 0.0635,
+            "p95": 0.1515,
+            "p99": 0.2715
+          },
+          "screening": {
+            "negative_screening": {
+              "threshold": -0.1,
+              "label": "built-up-related spectral decrease",
+              "count": 7196510,
+              "percent_of_valid": 11.2179,
+              "area_km2_geodesic": 696.42,
+              "area_km2_nominal": 719.65
+            },
+            "positive_screening": {
+              "threshold": 0.1,
+              "label": "built-up-related spectral increase",
+              "count": 8128202,
+              "percent_of_valid": 12.6702,
+              "area_km2_geodesic": 786.59,
+              "area_km2_nominal": 812.82
+            }
+          },
+          "spatial_integrity": {
+            "crs_match": true,
+            "dimensions_match": true,
+            "resolution_match": true,
+            "transform_match": true,
+            "bounds_match": true,
+            "passed": true
+          }
+        },
+        "tile2": {
+          "feature": "ndbi",
+          "tile": "tile2",
+          "out_filename": "sentinel2_tile2_ndbi_change_2016_2025.tif",
+          "out_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\change_detection\\sentinel2_tile2_ndbi_change_2016_2025.tif",
+          "source_2016_raster": "sentinel2_2016_tile2_ndbi.tif",
+          "source_2025_raster": "sentinel2_2025_tile2_ndbi.tif",
+          "formula": "NDBI_change = NDBI_2025 - NDBI_2016",
+          "common_valid_mask_rule": "2016_valid_mask == 1 AND 2025_valid_mask == 1 AND finite(f16) AND finite(f25)",
+          "crs": "EPSG:4326",
+          "resolution": [
+            8.983152841195215e-05,
+            8.983152841195215e-05
+          ],
+          "dimensions": {
+            "width": 4195,
+            "height": 12893
+          },
+          "bounds": {
+            "left": 79.41807797538183,
+            "bottom": 12.623934856203224,
+            "right": 79.79492123706997,
+            "top": 13.782132752018523
+          },
+          "pixel_area_km2_geodesic": 9.677251838356328e-05,
+          "pixel_area_km2_nominal": 0.0001,
+          "total_pixels": 54086135,
+          "common_valid_pixels": 5103779,
+          "nan_pixels": 48982356,
+          "valid_percentage": 9.4364,
+          "nan_percentage": 90.5636,
+          "min": -0.970888,
+          "max": 1.526941,
+          "mean": -0.028835,
+          "median": -0.0185,
+          "std": 0.137103,
+          "percentiles": {
+            "p1": -0.4045,
+            "p5": -0.2535,
+            "p25": -0.1085,
+            "p75": 0.0475,
+            "p95": 0.1855,
+            "p99": 0.3335
+          },
+          "screening": {
+            "negative_screening": {
+              "threshold": -0.1,
+              "label": "built-up-related spectral decrease",
+              "count": 1374398,
+              "percent_of_valid": 26.929,
+              "area_km2_geodesic": 133.0,
+              "area_km2_nominal": 137.44
+            },
+            "positive_screening": {
+              "threshold": 0.1,
+              "label": "built-up-related spectral increase",
+              "count": 646431,
+              "percent_of_valid": 12.6657,
+              "area_km2_geodesic": 62.56,
+              "area_km2_nominal": 64.64
+            }
+          },
+          "spatial_integrity": {
+            "crs_match": true,
+            "dimensions_match": true,
+            "resolution_match": true,
+            "transform_match": true,
+            "bounds_match": true,
+            "passed": true
+          }
+        }
+      },
+      "district_aggregate": {
+        "total_pixels": 229018359,
+        "common_valid_pixels": 69256014,
+        "nan_pixels": 159762345,
+        "valid_percentage": 30.2404,
+        "nan_percentage": 69.7596,
+        "district_weighted_mean": 0.006655,
+        "negative_screening": {
+          "threshold": -0.1,
+          "label": "built-up-related spectral decrease",
+          "count": 8570908,
+          "percent_of_valid": 12.3757,
+          "area_km2_geodesic": 829.42,
+          "area_km2_nominal": 857.09
+        },
+        "positive_screening": {
+          "threshold": 0.1,
+          "label": "built-up-related spectral increase",
+          "count": 8774633,
+          "percent_of_valid": 12.6698,
+          "area_km2_geodesic": 849.15,
+          "area_km2_nominal": 877.46
+        }
+      }
+    }
+  }
+}

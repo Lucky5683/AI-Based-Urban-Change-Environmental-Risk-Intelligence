@@ -1,0 +1,284 @@
+{
+  "project": "AI-Based Urban Change & Environmental Risk Intelligence",
+  "study_region": "Chittoor District, Andhra Pradesh, India",
+  "stage": "Sentinel-2 Preprocessing",
+  "generated_at": "2026-09-06T06:38:29.897008+00:00",
+  "script": "preprocess_sentinel2.py v1.0",
+  "input_files_count": 4,
+  "valid_masks_created_count": 4,
+  "temporal_limitation": "The GeoTIFF alone does not contain sufficient acquisition-date information to establish temporal/seasonal comparability between 2016 (~53 images) and 2025 (~253 images).",
+  "tiles": [
+    {
+      "source_filename": "Chittoor_Sentinel2_2016_Multispectral-0000000000-0000000000.tif",
+      "year": "2016",
+      "tile_identifier": "0000000000-0000000000",
+      "tile_label": "tile1",
+      "band_names": [
+        "B2",
+        "B3",
+        "B4",
+        "B8",
+        "B11",
+        "B12"
+      ],
+      "data_type": "float32",
+      "crs": "EPSG:4326",
+      "width": 13568,
+      "height": 12893,
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "bounds": {
+        "left": 78.19924379788847,
+        "top": 13.782132752018523,
+        "right": 79.41807797538183,
+        "bottom": 12.623934856203224
+      },
+      "nodata_value": null,
+      "valid_mask_filename": "sentinel2_2016_tile1_valid_mask.tif",
+      "mask_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\satellite\\sentinel2_2016_tile1_valid_mask.tif",
+      "total_pixels": 174932224,
+      "valid_pixels": 64152494,
+      "valid_pixel_pct": 36.6728,
+      "invalid_pixels": 110779730,
+      "invalid_pixel_pct": 63.3272,
+      "out_of_range_pixels_count": 0,
+      "minimum_reflectance": 0.0,
+      "maximum_reflectance": 0.96975,
+      "per_band_reflectance": {
+        "B2": {
+          "min": 0.0,
+          "max": 0.6972
+        },
+        "B3": {
+          "min": 0.0148,
+          "max": 0.732
+        },
+        "B4": {
+          "min": 0.0128,
+          "max": 0.7596
+        },
+        "B8": {
+          "min": 0.0043,
+          "max": 0.77485
+        },
+        "B11": {
+          "min": 0.0096,
+          "max": 0.91855
+        },
+        "B12": {
+          "min": 0.0079,
+          "max": 0.96975
+        }
+      },
+      "processing_date": "2026-09-06T06:37:31.865459+00:00",
+      "processing_script": "preprocess_sentinel2.py v1.0",
+      "temporal_limitation_note": "The GeoTIFF alone does not contain sufficient acquisition-date information to establish temporal/seasonal comparability between 2016 (~53 images) and 2025 (~253 images)."
+    },
+    {
+      "source_filename": "Chittoor_Sentinel2_2016_Multispectral-0000000000-0000013568.tif",
+      "year": "2016",
+      "tile_identifier": "0000000000-0000013568",
+      "tile_label": "tile2",
+      "band_names": [
+        "B2",
+        "B3",
+        "B4",
+        "B8",
+        "B11",
+        "B12"
+      ],
+      "data_type": "float32",
+      "crs": "EPSG:4326",
+      "width": 4195,
+      "height": 12893,
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "bounds": {
+        "left": 79.41807797538183,
+        "top": 13.782132752018523,
+        "right": 79.79492123706997,
+        "bottom": 12.623934856203224
+      },
+      "nodata_value": null,
+      "valid_mask_filename": "sentinel2_2016_tile2_valid_mask.tif",
+      "mask_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\satellite\\sentinel2_2016_tile2_valid_mask.tif",
+      "total_pixels": 54086135,
+      "valid_pixels": 5103779,
+      "valid_pixel_pct": 9.4364,
+      "invalid_pixels": 48982356,
+      "invalid_pixel_pct": 90.5636,
+      "out_of_range_pixels_count": 40,
+      "minimum_reflectance": 0.0002,
+      "maximum_reflectance": 0.9619,
+      "per_band_reflectance": {
+        "B2": {
+          "min": 0.0112,
+          "max": 0.5928
+        },
+        "B3": {
+          "min": 0.0222,
+          "max": 0.6356
+        },
+        "B4": {
+          "min": 0.0138,
+          "max": 0.6444
+        },
+        "B8": {
+          "min": 0.0002,
+          "max": 0.6968
+        },
+        "B11": {
+          "min": 0.006,
+          "max": 0.5981
+        },
+        "B12": {
+          "min": 0.0061,
+          "max": 0.9619
+        }
+      },
+      "processing_date": "2026-09-06T06:37:41.003245+00:00",
+      "processing_script": "preprocess_sentinel2.py v1.0",
+      "temporal_limitation_note": "The GeoTIFF alone does not contain sufficient acquisition-date information to establish temporal/seasonal comparability between 2016 (~53 images) and 2025 (~253 images)."
+    },
+    {
+      "source_filename": "Chittoor_Sentinel2_2025_Multispectral-0000000000-0000000000.tif",
+      "year": "2025",
+      "tile_identifier": "0000000000-0000000000",
+      "tile_label": "tile1",
+      "band_names": [
+        "B2",
+        "B3",
+        "B4",
+        "B8",
+        "B11",
+        "B12"
+      ],
+      "data_type": "float32",
+      "crs": "EPSG:4326",
+      "width": 13568,
+      "height": 12893,
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "bounds": {
+        "left": 78.19924379788847,
+        "top": 13.782132752018523,
+        "right": 79.41807797538183,
+        "bottom": 12.623934856203224
+      },
+      "nodata_value": null,
+      "valid_mask_filename": "sentinel2_2025_tile1_valid_mask.tif",
+      "mask_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\satellite\\sentinel2_2025_tile1_valid_mask.tif",
+      "total_pixels": 174932224,
+      "valid_pixels": 64153381,
+      "valid_pixel_pct": 36.6733,
+      "invalid_pixels": 110778843,
+      "invalid_pixel_pct": 63.3267,
+      "out_of_range_pixels_count": 255,
+      "minimum_reflectance": 0.0064,
+      "maximum_reflectance": 0.9964,
+      "per_band_reflectance": {
+        "B2": {
+          "min": 0.0162,
+          "max": 0.7022
+        },
+        "B3": {
+          "min": 0.0233,
+          "max": 0.75
+        },
+        "B4": {
+          "min": 0.01705,
+          "max": 0.8232
+        },
+        "B8": {
+          "min": 0.0102,
+          "max": 0.8232
+        },
+        "B11": {
+          "min": 0.0093,
+          "max": 0.92735
+        },
+        "B12": {
+          "min": 0.0064,
+          "max": 0.9964
+        }
+      },
+      "processing_date": "2026-09-06T06:38:19.629529+00:00",
+      "processing_script": "preprocess_sentinel2.py v1.0",
+      "temporal_limitation_note": "The GeoTIFF alone does not contain sufficient acquisition-date information to establish temporal/seasonal comparability between 2016 (~53 images) and 2025 (~253 images)."
+    },
+    {
+      "source_filename": "Chittoor_Sentinel2_2025_Multispectral-0000000000-0000013568.tif",
+      "year": "2025",
+      "tile_identifier": "0000000000-0000013568",
+      "tile_label": "tile2",
+      "band_names": [
+        "B2",
+        "B3",
+        "B4",
+        "B8",
+        "B11",
+        "B12"
+      ],
+      "data_type": "float32",
+      "crs": "EPSG:4326",
+      "width": 4195,
+      "height": 12893,
+      "resolution": [
+        8.983152841195215e-05,
+        0.0
+      ],
+      "bounds": {
+        "left": 79.41807797538183,
+        "top": 13.782132752018523,
+        "right": 79.79492123706997,
+        "bottom": 12.623934856203224
+      },
+      "nodata_value": null,
+      "valid_mask_filename": "sentinel2_2025_tile2_valid_mask.tif",
+      "mask_path": "C:\\DK\\Chittoor\\AI-Based-Urban-Change-Environmental-Risk-Intelligence\\data\\processed\\satellite\\sentinel2_2025_tile2_valid_mask.tif",
+      "total_pixels": 54086135,
+      "valid_pixels": 5105619,
+      "valid_pixel_pct": 9.4398,
+      "invalid_pixels": 48980516,
+      "invalid_pixel_pct": 90.5602,
+      "out_of_range_pixels_count": 0,
+      "minimum_reflectance": 0.0,
+      "maximum_reflectance": 0.87725,
+      "per_band_reflectance": {
+        "B2": {
+          "min": 0.0125,
+          "max": 0.6612
+        },
+        "B3": {
+          "min": 0.01425,
+          "max": 0.6656
+        },
+        "B4": {
+          "min": 0.0115,
+          "max": 0.6794
+        },
+        "B8": {
+          "min": 0.0,
+          "max": 0.6458
+        },
+        "B11": {
+          "min": 0.0063,
+          "max": 0.84435
+        },
+        "B12": {
+          "min": 0.0056,
+          "max": 0.87725
+        }
+      },
+      "processing_date": "2026-09-06T06:38:29.897008+00:00",
+      "processing_script": "preprocess_sentinel2.py v1.0",
+      "temporal_limitation_note": "The GeoTIFF alone does not contain sufficient acquisition-date information to establish temporal/seasonal comparability between 2016 (~53 images) and 2025 (~253 images)."
+    }
+  ]
+}

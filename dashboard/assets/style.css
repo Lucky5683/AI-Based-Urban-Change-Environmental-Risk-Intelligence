@@ -1,0 +1,186 @@
+/* Modern clean CSS styling for Chittoor Environmental Intelligence Dashboard */
+
+/* Top header and banner styling */
+.main-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    color: #f8fafc;
+    margin-bottom: 1.5rem;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.main-header h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #38bdf8;
+    letter-spacing: -0.02em;
+}
+
+.main-header p {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    margin: 0.4rem 0 0 0;
+}
+
+.main-header .badges {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.badge-pill {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* KPI Cards */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kpi-title {
+    font-size: 0.825rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin-bottom: 0.4rem;
+}
+
+.kpi-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.kpi-unit {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #64748b;
+    margin-left: 0.25rem;
+}
+
+.kpi-subtext {
+    font-size: 0.8rem;
+    color: #10b981;
+    margin-top: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.kpi-subtext.neutral {
+    color: #64748b;
+}
+
+.kpi-subtext.warning {
+    color: #f59e0b;
+}
+
+/* Stress Quartile Badges */
+.badge-q1 {
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.badge-q2 {
+    background-color: #fef9c3;
+    color: #854d0e;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.badge-q3 {
+    background-color: #ffedd5;
+    color: #c2410c;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.badge-q4 {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* Disclaimer Banner */
+.disclaimer-box {
+    background: #f8fafc;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+    padding: 0.9rem 1.2rem;
+    margin: 1.5rem 0;
+    font-size: 0.825rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.disclaimer-title {
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Scientific alert box */
+.scientific-notice {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #1e40af;
+    font-size: 0.875rem;
+}
+
+.provenance-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-family: monospace;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
